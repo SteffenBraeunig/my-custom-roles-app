@@ -9,6 +9,24 @@
             "allowedRoles": [ "authenticated" ]
         }
     ],
+    "auth": {
+        "rolesSource": "/api/GetRoles",
+        "identityProviders": {
+            "azureActiveDirectory": {
+                "userDetailsClaim": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+                "registration": {
+                    "openIdIssuer": "https://login.microsoftonline.com/0ae51e19-07c8-4e4b-bb6d-648ee58410f4",
+                    "clientIdSettingName": "80e9f7b3-b0e4-441f-b7db-34f8ff32f568",
+                    "clientSecretSettingName": "3eR8Q~.14BA6EOmVIdc8_leJTnbJsfGOHD7-KbBm"
+                },
+                "login": {
+                    "loginParameters": [
+                        "resource=https://graph.microsoft.com"
+                    ]
+                }
+            }
+        }
+    },
     "globalHeaders": {
         "Cache-Control": "no-cache"
     }
